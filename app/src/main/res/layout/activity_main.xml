@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:background="@color/cardview_dark_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Palindromic Tip Calculator"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:textColor="@color/cardview_light_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/labelPreTipAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pre-Tip Amount: $"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/preTipAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:autofillHints="0.00"
+            android:hint="Pre-Tip Amount"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/cardview_light_background"
+            android:textColor="@color/cardview_light_background"
+            android:textAlignment="textEnd"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/labelTipPct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tip %:"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20dp"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/tipPctSlider"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:valueFrom="1"
+            android:valueTo="50"
+            android:value="20"
+            android:stepSize="1.0" />
+
+        <TextView
+            android:id="@+id/pctAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="20 %"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Tip"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="30dp">
+
+        <TextView
+            android:id="@+id/labelTipAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tip Amount: "
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tipAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="$ 00.00"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20dp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/labelTotalAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Bill: "
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20dp"/>
+
+
+
+        <TextView
+            android:id="@+id/totalAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="$ 00.00"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20dp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
